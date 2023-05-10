@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 620751558411801656}
   - component: {fileID: -1543887036814772630}
   - component: {fileID: -4882912067017158580}
-  - component: {fileID: 5505842183660855940}
-  m_Layer: 0
+  - component: {fileID: 4900573042275280880}
+  - component: {fileID: 5110432473992624882}
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -120,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503af6e551475414191ec4969a9125c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 10
   jumpPower: 15
   extraJumps: 1
   groundLayer:
@@ -128,11 +129,24 @@ MonoBehaviour:
     m_Bits: 64
   rb: {fileID: -1543887036814772630}
   feet: {fileID: 89905637316445226}
-  health: 3
+  health: 1
   laserPrefab: {fileID: 6052156636360806410, guid: e4bd4cdfffdcacb44a1325326d19c0dc, type: 3}
-  projectileSpeed: 10
-  projectileCoolDown: 0.1
---- !u!60 &5505842183660855940
+  projectileSpeed: 20
+  projectileCoolDown: 0.3
+--- !u!114 &4900573042275280880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756389426282994146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136af4fb5e0a1fc4f9d11eda1ec9b751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 3
+--- !u!60 &5110432473992624882
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,22 +171,31 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.35375452, y: 0.43935156}
-      - {x: -0.027440071, y: 0.44317132}
-      - {x: -0.104022026, y: 0.36337662}
-      - {x: -0.103890896, y: 0.17841029}
-      - {x: -0.21809101, y: 0.09065047}
-      - {x: -0.50504124, y: -0.05}
-      - {x: -0.52284586, y: -0.11735788}
-      - {x: -0.34735394, y: -0.30434155}
-      - {x: -0.25371838, y: -0.3150549}
-      - {x: -0.26008245, y: -0.3902037}
-      - {x: 0.24534321, y: -0.40349746}
-      - {x: 0.27032548, y: -0.33382177}
-      - {x: 0.45504123, y: -0.20117965}
-      - {x: 0.43200636, y: 0.28888464}
-      - {x: 0.40619498, y: 0.39837787}
-      - {x: 0.36106214, y: 0.42831904}
+    - - {x: 0.34075594, y: 0.44569778}
+      - {x: 0.012322426, y: 0.45095974}
+      - {x: -0.042699337, y: 0.39221597}
+      - {x: -0.09042978, y: 0.33923674}
+      - {x: -0.09348345, y: 0.17637014}
+      - {x: -0.21896648, y: 0.06906238}
+      - {x: -0.32108593, y: 0.020748377}
+      - {x: -0.4898349, y: -0.03426223}
+      - {x: -0.49882805, y: -0.13651052}
+      - {x: -0.34433413, y: -0.29065847}
+      - {x: -0.26453495, y: -0.3081789}
+      - {x: -0.24315998, y: -0.40782094}
+      - {x: 0.25424957, y: -0.40252733}
+      - {x: 0.2662757, y: -0.30440092}
+      - {x: 0.36178303, y: -0.30091214}
+      - {x: 0.35924196, y: -0.24498463}
+      - {x: 0.4068718, y: -0.25083613}
+      - {x: 0.40947056, y: -0.19036269}
+      - {x: 0.4555729, y: -0.18866292}
+      - {x: 0.44648457, y: 0.3012414}
+      - {x: 0.44648457, y: 0.3012414}
+      - {x: 0.40068674, y: 0.29836822}
+      - {x: 0.39873505, y: 0.403908}
+      - {x: 0.349243, y: 0.40290877}
+      - {x: 0.3494545, y: 0.4466477}
 --- !u!1 &4081871593023939910
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,8 +205,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 89905637316445226}
-  - component: {fileID: 3634385476090557315}
-  m_Layer: 0
+  - component: {fileID: 3256072976514589877}
+  m_Layer: 9
   m_Name: Feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +227,7 @@ Transform:
   m_Father: {fileID: 4937342427937795492}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &3634385476090557315
+--- !u!61 &3256072976514589877
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,7 +240,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.3533436}
+  m_Offset: {x: -0.0013384819, y: -0.356009}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -228,5 +251,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.47408295, y: 0.094632864}
+  m_Size: {x: 0.494092, y: 0.089901924}
   m_EdgeRadius: 0

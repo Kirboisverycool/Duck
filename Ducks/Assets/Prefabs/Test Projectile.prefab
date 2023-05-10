@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: -49073152399340616}
   - component: {fileID: -8269715141427953950}
   - component: {fileID: 6397449965899724520}
-  m_Layer: 0
+  - component: {fileID: -2151349123188596706}
+  m_Layer: 10
   m_Name: Test Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f70566725ab1df54d83c78cb43544e00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 610ea2d4e62ef554e91230fcdf9f3599, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -136,3 +137,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.32, y: 0.32}
   m_Direction: 0
+--- !u!114 &-2151349123188596706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6052156636360806410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d740e126e3908324c9251e74e0d2ae54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

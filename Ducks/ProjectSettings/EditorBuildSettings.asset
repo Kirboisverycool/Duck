@@ -16,11 +16,14 @@ EditorBuildSettings:
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/GameScene2.unity
-    guid: 8a071695c32df184baa97f9e772de94a
-  - enabled: 1
-    path: Assets/Scenes/GameScene3.unity
     guid: 870f74fcbfd9bd94a83e497b210664ce
+  - enabled: 1
+    path: Assets/Scenes/EndGameScene.unity
+    guid: 041fe1a957ef8ba40809ca4c1d8dccd6
   - enabled: 1
     path: Assets/Scenes/LoseScreen.unity
     guid: 24bcf264de63835439c637e72f99a9f8
+  - enabled: 1
+    path: Assets/Scenes/SecretGameScene.unity
+    guid: 8a071695c32df184baa97f9e772de94a
   m_configObjects: {}

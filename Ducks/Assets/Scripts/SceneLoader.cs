@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public void LoadNextScene()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
+    }
+
     public void LoadStartScene()
     {
         SceneManager.LoadScene(0);
@@ -25,13 +31,18 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 
-    public void LoadGameScene3()
+    public void SecretGameScene()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(6);
     }
 
     public void LoadLoseScene()
     {
         SceneManager.LoadScene(5);
+    }
+
+    public void LoadEndGameScene()
+    {
+        SceneManager.LoadScene(4);
     }
 }

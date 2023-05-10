@@ -11,6 +11,11 @@ public class DamageDealer : MonoBehaviour
         return damage;
     }
 
+    public void Hit()
+    {
+        Destroy(gameObject);
+    }
+
     // Start is called before the first frame update
     void Start()
     {

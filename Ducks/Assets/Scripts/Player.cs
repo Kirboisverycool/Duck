@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     public void Fire()
@@ -45,18 +45,35 @@ public class Player : MonoBehaviour
         while (true)
         {
             GameObject laser = Instantiate(laserPrefab, transform.position, transform.rotation) as GameObject;
-            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(projectileSpeed, 0);
+            if(transform.localScale.x == 1)
+            {
+                laser.GetComponent<Rigidbody2D>().velocity = new Vector2(projectileSpeed, 0);
+            }
+            else if(transform.localScale.x == -1)
+            {
+                laser.GetComponent<Rigidbody2D>().velocity = new Vector2(-projectileSpeed, 0);
+            }
+            
             yield return new WaitForSeconds(projectileCoolDown);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        DamageDealer otherDamageDealer = other.gameObject.GetComponent<DamageDealer>();
+        if (otherDamageDealer == null) { return; }
+        ProcessHit(otherDamageDealer);
     }
 
     private void ProcessHit(DamageDealer otherDamageDealer)
     {
         health -= otherDamageDealer.GetDamage();
+        otherDamageDealer.Hit();
         if (health <= 0)
         {
-            Destroy(gameObject);
             FindObjectOfType<SceneLoader>().LoadLoseScene();
+            Destroy(gameObject);
+            
         }
     }
 
@@ -72,6 +89,16 @@ public class Player : MonoBehaviour
         }
 
         CheckGrounded();
+
+        if (rb.velocity.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1); 
+        }
+
+        else if (rb.velocity.x > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 
     private void FixedUpdate()

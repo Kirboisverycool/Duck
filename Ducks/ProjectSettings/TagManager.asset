@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Wall
+  - Victory
   layers:
   - Default
   - TransparentFX
@@ -15,10 +17,10 @@ TagManager:
   - Wall
   - Enemy
   - Player
-  - 
-  - 
-  - 
-  - 
+  - Projectile
+  - Victory
+  - Next
+  - Collider
   - 
   - 
   - 
